@@ -1,9 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
+import publisherReducer from './publishers/publisherArticles';
+import articlesReducer from './articles/articles';
 
 const store = configureStore({
     reducer: {
-        articles: [],
-        publishers: [],
+        articles: articlesReducer,
+        publishers: publisherReducer,
     }
 })
 
